@@ -16,6 +16,13 @@ interface MollieOrderRepositoryInterface
     public function getByOrder(OrderInterface $order): MollieOrderInterface;
 
     /**
+     * @param string $transactionId
+     * @return MollieOrderInterface
+     * @throws \Magento\Framework\Exception\NoSuchEntityException
+     */
+    public function getByTransactionId(string $transactionId): MollieOrderInterface;
+
+    /**
      * @param \Magento\Sales\Api\Data\OrderInterface $order
      * @param string                                 $mollieTransactionId
      * @param string                                 $mollieSecretHash

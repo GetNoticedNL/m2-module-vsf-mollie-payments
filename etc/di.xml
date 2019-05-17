@@ -4,4 +4,10 @@
     <type name="Magento\Sales\Api\OrderRepositoryInterface">
         <plugin name="gn_vsf_order_extension_attributes" type="GetNoticed\VsfMollie\Plugin\OrderExtensionAttributes"/>
     </type>
+    <type name="Magento\Sales\Api\Data\OrderInterface">
+        <plugin name="gn_vsf_order_get_transaction_id" type="GetNoticed\VsfMollie\Plugin\TransactionId"/>
+    </type>
+    <type name="Mollie\Payment\Model\Mollie">
+        <plugin name="gn_vsf_order_get_order_by_transaction_id" type="GetNoticed\VsfMollie\Plugin\GetOrderByTransactionId"/>
+    </type>
 </config>
