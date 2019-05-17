@@ -9,5 +9,7 @@
     </type>
     <type name="Mollie\Payment\Model\Mollie">
         <plugin name="gn_vsf_order_get_order_by_transaction_id" type="GetNoticed\VsfMollie\Plugin\GetOrderByTransactionId"/>
+        <plugin name="gn_vsf_order_set_can_send_new_email_flag" type="GetNoticed\VsfMollie\Plugin\SetCanSendNewEmailFlag"/>
     </type>
+
 </config>
