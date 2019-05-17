@@ -30,7 +30,7 @@ class GetOrderByTransactionId {
      * @return bool|int
      */
     public function afterGetOrderIdByTransactionId(
-        Mollie\Payment\Model\Mollie $subject,
+        \Mollie\Payment\Model\Mollie $subject,
         $result,
         string $transactionId
     ) {
