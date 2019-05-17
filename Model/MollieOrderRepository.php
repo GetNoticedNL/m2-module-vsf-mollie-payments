@@ -51,6 +51,18 @@ class MollieOrderRepository implements MollieOrderRepositoryInterface
         return $mollieOrder;
     }
 
+    public function getByTransactionId(string $transactionId): MollieOrderInterface
+    {
+        $mollieOrder = $this->createEntityInstance();
+        $this->resource->load($mollieOrder, $transactionId, 'mollie_transaction_id');
+
+        if ($mollieOrder->getId() === null) {
+            throw NoSuchEntityException::singleField('order_id', $order->getId());
+        }
+
+        return $mollieOrder;
+    }
+
     /**
      * @inheritdoc
      *
